@@ -1,0 +1,20 @@
+# 配置数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://106.14.157.213:3306/springboot?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: Dinghaiting19980501@
+
+# 配置日志
+logging:
+  level:
+    root: warn
+    com.iwin.mapper.UserMapper: trace
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+#全局逻辑删除字段值
+  global-config:
+    db-config:
+      logic-delete-field: deleted
